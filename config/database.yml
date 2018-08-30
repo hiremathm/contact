@@ -79,7 +79,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: contactbook_production
   username: contactbook
-  password: <%= ENV['CONTACTBOOK_DATABASE_PASSWORD'] %>
+  password: rails123
+  host: localhost
+  port: 5432
